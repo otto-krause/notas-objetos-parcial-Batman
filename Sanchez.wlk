@@ -32,7 +32,7 @@ method combatirCrimen(fuerzaV) {
 
 method llorarASusPadres(){
 	estres-=10
-	herramientas.take(herramientas.size()-1)//No aplica efecto
+	herramientas.take(herramientas.size()-1)//No aplica efecto, es decir, no modifica la lista original
 }
 
 
@@ -141,7 +141,7 @@ class CiudadGotica{
 	
 	method esLujosa(){
 		habitantes.size()/2.esRico()
-		//No funciona
+		//No cumple con el requerimiento.
 	}
 
 	method sonLosMasTop(){
