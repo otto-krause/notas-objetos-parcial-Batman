@@ -4,7 +4,7 @@ class NuevaTecnologia
 	var nombre
 	var potencia
 	var cantidadUsos
-	//La cantidad de usos era de 0, no habia que pasarlo por constructor
+	//No era necesario pasar la cantidad de usos por constructor
 	constructor(n,p,c)
 	{
 		nombre = n
