@@ -217,9 +217,9 @@ object batman
 	method CombatirCrimen(objetivo) 
 	{
 		estres+= objetivo.size()
-		//Esto no funciona, la pandilla no tiene size ni el villano tampoco
+		//Esta linea no funciona, la pandilla no entiende el mensaje size(), ni el villano tampoco
 		objetivo.forEach({v => v.serCombatido(self)})
-		//Esto solo funcionaria si te pasan una lista de villanos, por parametro
+		//Esto solo funcionaria si te pasan una lista de villanos por parametro, y esa no era la idea
 	}
 	method LlorarPadres()
 	{
