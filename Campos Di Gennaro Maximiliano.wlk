@@ -81,6 +81,8 @@ class Ladrongm inherits Ladron{
 }
 class Pandilla{
 	var integrantes=[]
+	
+	
 	method crearladrongm(){
 		integrantes.add([new Ladrongm()])
 	}
@@ -90,6 +92,11 @@ class Pandilla{
 	method crearpsicopata(){
 		integrantes.add([new Psicopata()])
 	}
+	//Estos metodos para crear ladrones no son requeridos, y agregarlos adentro de los corchetes es agregar una lista, porque lo que el mensaje no funciona
+	
+	
+	
+	
  	method inconcientetodalap(){
 		integrantes.estarinconcientes()
 	}
@@ -99,6 +106,8 @@ class Pandilla{
 	method fuerza(){
 		integrantes.fuerza().sum()
 	}
+	//Ninguno de estos metodos utiliza un correcto uso de las funciones de listas
+	
 }
 class Tecnologia{
 	var nombre
@@ -157,7 +166,7 @@ object ciudadgotica{
 			villanoscontrabatman.count().times(baticaballero.combatircrimen())
 			baticaballero.restarvitalidad()
 		}
-		//Combaatir el crimen es un comportamiento de Batman, no de gotica
+		//Combatir el crimen es un comportamiento de Batman, no de gotica
 	}
 	method mostrarvillanosp(){
 		console.println(villanosprofugos)
