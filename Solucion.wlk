@@ -1,4 +1,4 @@
-class Herramienta{
+class Tecnologia{
 	var nombre = ""
 	var potencia
 	var usos = 1
@@ -23,7 +23,7 @@ object batman{
 	var  rinonera  = []
 	
 	method desarrollarTecnologia(nombre, potencia){
-		rinonera.add(new Herramienta(nombre,potencia))
+		rinonera.add(new Tecnologia(nombre,potencia))
 	}
 	
 	method fuerza(){
@@ -42,7 +42,7 @@ object batman{
 			vitalidad-=200
 		}
 		estres+=enemigo.cuantosSon()
-		rinonera.forEach({h => h.usar()})
+		rinonera.forEach({t => t.usar()})
 	}
 	method llorarASusPadres(){
 		estres = 0.max(estres-10)
@@ -91,6 +91,9 @@ class Villano{
 
 class Pandilla{
 	var villanos=[]
+	constructor(vil){
+		villanos = vil
+	}
 	method fuerza(){
 		return villanos.sum({v => v.fuerza()})
 	}
@@ -141,6 +144,7 @@ class GuanteMarron inherits Ladron{
 	}
 }
 //Los guantes tambien podian modelarse usando composicion
+
 class Personas{
 	var capital
 	constructor(c){
@@ -172,19 +176,12 @@ object ciudadGotica {
 	method perderPersonas(cantidad) {
 		cantidad.times({i => self.perderPersona()}) 
 	}
-	method personas(){
-		return personas
-	}
 	
 	method robarALosRicos(){
 		personas.filter({p => p.esRico()}).forEach({p => p.serRobado()})			
 	}
 	method robarALaClaseMedia(){
 		personas.filter({p => p.esClaseMedia()}).forEach({p => p.serRobado()})			
-	}
-	
-	method darALosPobres(cantidad){
-		personas.filter({p => p.esClaseBaja()}).forEach({p => p.recibirDinero(cantidad)})
 	}
 	
 	//Parte 2
@@ -197,5 +194,4 @@ object ciudadGotica {
 	method estanProfugos(){
 		return villanos.filter({v => v.estaProfugo()})
 	}
-	
 }
